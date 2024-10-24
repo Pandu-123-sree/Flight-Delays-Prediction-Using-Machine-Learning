@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+</head>
+<body>
+    <h1>Update Task</h1>
+    <form method="POST">
+        <label for="description">Task Description:</label>
+        <input type="text" id="description" name="description" value="{{ task[1] }}" required>
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+            <option value="0" {% if task[2] == 0 %}selected{% endif %}>Incomplete</option>
+            <option value="1" {% if task[2] == 1 %}selected{% endif %}>Complete</option>
+        </select>
+        <button type="submit">Update Task</button>
+    </form>
+    <a href="/">Back to Task List</a>
+</body>
+</html>

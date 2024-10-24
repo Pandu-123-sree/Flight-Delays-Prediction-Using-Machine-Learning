@@ -1,0 +1,5 @@
+Requirements to run the task manager:
+
+1. create a virtual environment.
+2. install extension of sqlite3.
+3. install flask
